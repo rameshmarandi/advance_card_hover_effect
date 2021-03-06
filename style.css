@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height: 100vh;
+}
+.container {
+    width: 1080px;
+    display: flex;
+    flex-direction: space-between;
+}
+
+.container .card{
+    position: relative;
+    width: 300px;
+    padding: 40px;
+    margin: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0.5);
+    overflow: hidden;
+}
+.container .card:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: calc(-100% + 4px);
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    transition: 0.5s ease-in-out;
+}
+.container .card:hover:before{
+    bottom: 0;
+}
+
+.container .card:hover p{
+    color: #fff;
+}
+.container .card:nth-child(1):before{
+    
+    background:linear-gradient(rgb(255, 251, 0) ,rgb(0, 153, 255) )
+
+}
+
+.container .card:nth-child(2):before{
+    background:linear-gradient(rgb(255, 157, 0) ,rgba(174, 0, 255, 0.568) )
+
+}
+
+.container .card:nth-child(3):before{
+    background:linear-gradient(rgb(255, 0, 212) ,rgb(0, 153, 255) )
+
+}
+.container .card div {
+    position: relative;
+    z-index: 2;
+
+}
+.container .card div h2{
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 10px;
+    /* text-align: center; */
+}
+.container .card div p{
+    font-size: 1rem;
+    font-weight: 3000;
+    margin: 5px;
+    text-justify: justify ;
+    line-height: 1.7rem;
+    /* text-align: center; */
+}
+
+.container .card div a{
+    text-decoration:none;
+    display: inline-block;
+    margin: 10px;
+    font-size: 17px;
+    padding: 5px;
+    margin-top: 10px;
+    box-shadow: 1px 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.container .card div a:hover{
+   color: rgb(232, 236, 240);
+}
